@@ -125,11 +125,26 @@
   --color-subtext: #FF8A71;
   
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1500px) {
+   .left{
+	margin-left: 30px;
+   }
+   .img{
+	margin-left: 10px;
+	width: 500px;
+   }
+	
+
+}
+
+@media screen and (max-width: 1100px) {
 	.img{
 		visibility: hidden;
 		display:none;
-	  }
+	}
+
+	
+
 }
 
 @media screen and (max-width: 700px) {

@@ -75,7 +75,7 @@ const Login = () => {
 				</div>
 			</div>
 			<div >
-      <img src={ai} width={600}/>
+      <img className={styles.img} src={ai} width={600}/>
     </div>
 		</div>
 	);
