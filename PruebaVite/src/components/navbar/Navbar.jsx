@@ -21,6 +21,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="gpt3__navbar-sign">
+
       <Link to="/login">
               <p>iniciar sesion</p>
               </Link>
@@ -48,6 +49,7 @@ const Navbar = () => {
               <p>iniciar sesion</p>
               </Link>
             	<Link to="/signup">
+
 						<button type="button">
 							Sing Up
 						</button>

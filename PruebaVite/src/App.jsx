@@ -3,6 +3,7 @@ import Main from "./components/main";
 import Signup from "./components/Singup";
 import Login from "./components/Login";
 import Index2 from "./components/main";
+import Admin from "./components/Admin";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 			{user && <Route path="/Main" exact element={<Main />} />}
 			<Route path="/signup" exact element={<Signup />} />
 			<Route path="/login" exact element={<Login />} />
+			<Route path="/Admin" exact element={<Admin/>} />
 			<Route path="/index2" exact element={<Index2 />} />
 			<Route path="/" element={<Navigate replace to="/index2" />} />
 		</Routes>

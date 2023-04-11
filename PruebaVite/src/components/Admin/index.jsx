@@ -1,10 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import styles from "./styles.module.css";
+import styles from "./stylesAdmin.css";
 import ai from '../../assets/ai.png';
 
-const Login = () => {
+const Admin = () => {
 	const [data, setData] = useState({ email: "", password: "" });
 	const [error, setError] = useState("");
 
@@ -83,4 +83,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default Admin;
