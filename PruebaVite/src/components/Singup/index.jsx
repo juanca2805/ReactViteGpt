@@ -26,12 +26,12 @@ const Signup = () => {
 			navigate("/login");
 			console.log(res.message);
 		} catch (error) {
-			if (
-				error.response &&
-				error.response.status >= 400 &&
-				error.response.status <= 500
-			) {
-				setError(error.response.data.message);
+			if (error.response.status === 400) {
+				setError("Invalid email or password. Please try again.");
+			} else if (error.response.status === 500) {
+				setError("Internal server error. Please try again later.");
+			} else {
+				setError("An error occurred. Please try again later.");
 			}
 		}
 	};
@@ -51,12 +51,14 @@ const Signup = () => {
 					<form className={styles.form_container} onSubmit={handleSubmit}>
 						<h1>Crear Cuenta</h1>
 						<input
-							type="text"
-							placeholder="Primer nombre"
-							name="firstName"
+							type="email"
+							placeholder="Correo"
+							name="email"
 							onChange={handleChange}
-							value={data.firstName}
+							value={data.email}
 							required
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+							title="Please enter a valid email address"
 							className={styles.input}
 						/>
 						<input

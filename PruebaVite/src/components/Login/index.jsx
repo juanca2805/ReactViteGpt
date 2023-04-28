@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 import ai from '../../assets/ai.png';
 
 const Login = () => {
-	const [data, setData] = useState({ email: "", password: "" });
+	const [formData, setFormData] = useState({ email: "", password: "" });
 	const [error, setError] = useState("");
 
 	const handleChange = ({ currentTarget: input }) => {
@@ -54,14 +54,14 @@ const Login = () => {
 							required
 							className={styles.input}
 						/>
-						{error && <div className={styles.error_msg}>{error}</div>}
+						{error ? <div className={styles.error_msg}>{error}</div> : null}
 						<Link to="/Admin">
 						<button type="submit" className={styles.green_btn}>
 							Iniciar sesion
 						</button>
 						</Link>
 						<Link to="/Index2">
-						<button type="button" className={styles.white_btn}>
+						<button type="submit" className={styles.white_btn}>
 							Salir
 						</button>
 					</Link>
